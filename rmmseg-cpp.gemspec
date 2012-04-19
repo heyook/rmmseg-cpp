@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.summary     = "A high performance Chinese word segmentation utility for
 Ruby."
   s.description = "An re-implementation of rmmseg (Chinese word segmentation library for Ruby) in C++"
-
+  s.extensions  = ['ext/rmmseg/extconf.rb']
   s.required_rubygems_version = ">= 1.3.6"
 
   s.files        = Dir.glob("{bin,data,ext,lib}/**/*") + %w(LICENSE README.md)

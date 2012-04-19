@@ -61,12 +61,12 @@ Then create a +Algorithm+ object and call +next_token+ until got a
 +nil+:
 
 ```ruby
-  algor = RMMSeg::Algorithm.new(text)
-  loop do
-    tok = algor.next_token
-    break if tok.nil?
-    puts "#{tok.text} [#{tok.start}..#{tok.end}]"
-  end
+algor = RMMSeg::Algorithm.new(text)
+loop do
+  tok = algor.next_token
+  break if tok.nil?
+  puts "#{tok.text} [#{tok.start}..#{tok.end}]"
+end
 ```
 
 #### With Ferret
@@ -74,11 +74,11 @@ Then create a +Algorithm+ object and call +next_token+ until got a
 To use rmmseg-cpp with Ferret, just use the analyzer provided:
 
 ```ruby
-  analyzer = RMMSeg::Ferret::Analyzer.new { |tokenizer|
-    Ferret::Analysis::LowerCaseFilter.new(tokenizer)
-  }
+analyzer = RMMSeg::Ferret::Analyzer.new { |tokenizer|
+  Ferret::Analysis::LowerCaseFilter.new(tokenizer)
+}
 
-  index = Ferret::Index::Index.new(:analyzer => analyzer)
+index = Ferret::Index::Index.new(:analyzer => analyzer)
 ```
 
 See <tt>misc/ferret_example.rb</tt> for a complete example.
@@ -88,6 +88,6 @@ See <tt>misc/ferret_example.rb</tt> for a complete example.
 * ruby 1.8.x, ruby 1.9x
 * g++
 
-## INSTALL:
+### INSTALL:
 
 * sudo gem install rmmseg-cpp
