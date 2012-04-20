@@ -90,4 +90,4 @@ See <tt>misc/ferret_example.rb</tt> for a complete example.
 
 ### INSTALL:
 
-* sudo gem install rmmseg-cpp
+`sudo gem install rmmseg-cpp`
